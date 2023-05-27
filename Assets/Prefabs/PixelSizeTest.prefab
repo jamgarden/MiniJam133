@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4796985856779189669}
   - component: {fileID: 4796985856779189665}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PixelSizeTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   coyoteTime: 0.2
-  extraJumps: 0
+  extraJumps: 1
   gravityMultiplier: 0
   groundRayLength: 1
   groundRayRadius: 0.4
@@ -183,7 +183,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.11, y: 0.17}
+  m_Size: {x: 0.15, y: 0.16}
   m_Direction: 0
 --- !u!50 &4796985856779189665
 Rigidbody2D:
