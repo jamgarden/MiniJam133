@@ -149,8 +149,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  coyoteTime: 0.2
-  extraJumps: 0
+  coyoteTime: 0.1
+  extraJumps: 1
   gravityMultiplier: 180
   groundRayLayerMask:
     serializedVersion: 2
