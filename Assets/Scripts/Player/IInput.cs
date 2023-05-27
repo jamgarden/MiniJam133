@@ -6,4 +6,5 @@ public interface IInput
 {
     public float Horizontal { get; }
     public bool Jump { get; }
+    public bool Punch { get; }
 }
