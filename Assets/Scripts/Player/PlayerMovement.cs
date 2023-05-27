@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(CapsuleCollider2D))]
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float jumpForce;
@@ -12,10 +13,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float gravityMultiplier;
 
     [Space]
-    [SerializeField] private float groundRayLength;
-    [SerializeField] private float groundRayRadius;
     [SerializeField] private LayerMask groundRayLayerMask;
 
+    private float groundRayLength;
+    private float groundRayRadius;
     private bool isGrounded;
     private Vector2 moveDirection;
     private Vector2 gravity;
@@ -26,11 +27,16 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D playerRigidbody;
     private IInput input;
     private RaycastHit2D groundRayHit;
+    private CapsuleCollider2D capsuleCollider;
 
     private void Awake()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         input = GetComponent<IInput>();
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
+        Vector3 colliderSize = capsuleCollider.bounds.size;
+        groundRayLength = colliderSize.y * 0.4f;
+        groundRayRadius = colliderSize.x * 0.6f;
     }
 
     private void Update()
