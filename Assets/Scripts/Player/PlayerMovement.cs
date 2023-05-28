@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool IsWalking { get; private set; }
     public Vector2 FacingDirection { get; private set; }
+    public bool IsGrounded { get; private set; }
 
     [SerializeField] private float jumpForce;
     [SerializeField] private float moveSpeed;
@@ -17,14 +18,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float coyoteTime;
     [SerializeField] private int extraJumps;
     [SerializeField] private float gravityMultiplier;
-    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioSource jumpSound;
+    [SerializeField] private AudioSource landingSounds;
 
     [Space]
     [SerializeField] private LayerMask groundRayLayerMask;
 
     private float groundRayLength;
     private float groundRayRadius;
-    private bool isGrounded;
     private Vector2 moveDirection;
     private Vector2 gravity;
     private float accelerationTimer;
@@ -43,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         Vector3 colliderSize = capsuleCollider.bounds.size;
         groundRayLength = colliderSize.y * 0.4f;
-        groundRayRadius = colliderSize.x * 0.6f;
+        groundRayRadius = colliderSize.x * 0.5f;
     }
 
     private void Update()
@@ -55,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
         CountDownCoyoteTime();
 
-        IsWalking = isGrounded && Mathf.Abs(moveDirection.x) > 0;
+        IsWalking = IsGrounded && Mathf.Abs(moveDirection.x) > 0;
         if (input.Horizontal > 0)
             FacingDirection = Vector2.right;
         else if (input.Horizontal < 0)
@@ -64,13 +65,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void CountDownCoyoteTime()
     {
-        if (isGrounded == false)
+        if (IsGrounded == false)
             coyoteTimer -= Time.deltaTime;
     }
 
     private void SetGravity()
     {
-        if (isGrounded)
+        if (IsGrounded)
             gravity = -groundRayHit.normal;
         else
             gravity = Vector2.down;
@@ -80,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        if (isGrounded)
+        if (IsGrounded)
         {
             Vector3 cross = Vector3.Cross(transform.right * input.Horizontal, groundRayHit.normal);
             moveDirection = Vector3.Cross(groundRayHit.normal, cross);
@@ -102,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
         else if (accelerationTimer <= 1)
             accelerationTimer += Time.deltaTime;
 
-        if (isGrounded)
+        if (IsGrounded)
             moveDirection.x *= groundedAccelerationCurve.Evaluate(accelerationTimer);
         else
             moveDirection.x *= airAccelerationCurve.Evaluate(accelerationTimer);
@@ -112,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (input.Jump)
         {
-            if (isGrounded || coyoteTimer > 0)
+            if (IsGrounded || coyoteTimer > 0)
             {
                 ExecuteJump();
             }
@@ -133,23 +134,24 @@ public class PlayerMovement : MonoBehaviour
     private void ExecuteJump()
     {
         jumpTimer = 0;
-        AudioManager.Instance.PlaySound(jumpSound);
+        jumpSound.Play();
         OnJump?.Invoke();
     }
 
     private void SetGrounded()
     {
         groundRayHit = Physics2D.CircleCast(transform.position, groundRayRadius, Vector2.down, groundRayLength, groundRayLayerMask);
-        if (isGrounded == false && groundRayHit)
+        if (IsGrounded == false && groundRayHit)
             OnGrounded();
 
-        isGrounded = groundRayHit;
+        IsGrounded = groundRayHit;
     }
 
     private void OnGrounded()
     {
         remainingExtraJumps = extraJumps;
         coyoteTimer = coyoteTime;
+        landingSounds.Play();
     }
 
     private void FixedUpdate()
