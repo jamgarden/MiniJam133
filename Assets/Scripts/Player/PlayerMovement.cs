@@ -18,8 +18,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float coyoteTime;
     [SerializeField] private int extraJumps;
     [SerializeField] private float gravityMultiplier;
-    [SerializeField] private AudioClip jumpSound;
-    [SerializeField] private AudioClip landingSound;
+    [SerializeField] private AudioSource jumpSound;
+    [SerializeField] private AudioSource landingSounds;
 
     [Space]
     [SerializeField] private LayerMask groundRayLayerMask;
@@ -134,7 +134,7 @@ public class PlayerMovement : MonoBehaviour
     private void ExecuteJump()
     {
         jumpTimer = 0;
-        AudioManager.Instance.PlaySound(jumpSound);
+        jumpSound.Play();
         OnJump?.Invoke();
     }
 
@@ -151,7 +151,7 @@ public class PlayerMovement : MonoBehaviour
     {
         remainingExtraJumps = extraJumps;
         coyoteTimer = coyoteTime;
-        AudioManager.Instance.PlaySound(landingSound);
+        landingSounds.Play();
     }
 
     private void FixedUpdate()
