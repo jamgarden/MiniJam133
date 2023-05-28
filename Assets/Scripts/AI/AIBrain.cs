@@ -7,6 +7,7 @@ public class AIBrain : MonoBehaviour, IInput
     public bool Jump { get; private set; }
 
     public bool Punch { get; private set; }
+    public bool Grapple { get; private set; }
 
     [field: SerializeField]
     public LayerMask WallLayer { get; private set; }

@@ -24,15 +24,17 @@ public class GrapplingHook : MonoBehaviour
     private bool hooked;
     private float velocityMultiplier;
     private float initialDistance;
+    IInput input;
 
     private void Awake()
     {
         ignoreLayers = ~ignoreLayers;
+        input = GetComponent<IInput>();
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (input.Grapple)
         {
             StopAllCoroutines();
             StartCoroutine(FireHook());
@@ -122,6 +124,5 @@ public class GrapplingHook : MonoBehaviour
 
         Vector2 direction = (hookPosition - (Vector2)transform.position).normalized;
         playerRigidbody.AddForce(direction * winchSpeed * velocityMultiplier);
-        Debug.Log(velocityMultiplier);
     }
 }
