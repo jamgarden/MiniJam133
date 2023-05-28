@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float coyoteTime;
     [SerializeField] private int extraJumps;
     [SerializeField] private float gravityMultiplier;
+    [SerializeField] private AudioClip jumpSound;
 
     [Space]
     [SerializeField] private LayerMask groundRayLayerMask;
@@ -101,12 +102,12 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isGrounded || coyoteTimer > 0)
             {
-                jumpTimer = 0;
+                ExecuteJump();
             }
             else if (remainingExtraJumps > 0)
             {
                 remainingExtraJumps--;
-                jumpTimer = 0;
+                ExecuteJump();
             }
         }
 
@@ -115,6 +116,12 @@ public class PlayerMovement : MonoBehaviour
             moveDirection.y = jumpCurve.Evaluate(jumpTimer) * jumpForce;
             jumpTimer += Time.deltaTime;
         }
+    }
+
+    private void ExecuteJump()
+    {
+        jumpTimer = 0;
+        AudioManager.Instance.PlaySound(jumpSound);
     }
 
     private void SetGrounded()
