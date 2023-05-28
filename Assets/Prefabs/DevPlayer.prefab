@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4796985856779189664}
   - component: {fileID: 4796985856779189667}
+  - component: {fileID: 6472215589167880223}
   - component: {fileID: 4796985856779189666}
   - component: {fileID: 4796985856779189669}
   - component: {fileID: 4796985856779189665}
@@ -48,6 +49,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e93e2ae83bdf64faaaf59e281c0708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <OnJump>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
   jumpForce: 600
   moveSpeed: 200
   jumpCurve:
@@ -152,9 +156,23 @@ MonoBehaviour:
   coyoteTime: 0.1
   extraJumps: 1
   gravityMultiplier: 180
+  jumpSound: {fileID: 0}
   groundRayLayerMask:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &6472215589167880223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796985856779189668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94998fbc677c0354eb5335d95f314cd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3370125120014230374}
 --- !u!114 &4796985856779189666
 MonoBehaviour:
   m_ObjectHideFlags: 0

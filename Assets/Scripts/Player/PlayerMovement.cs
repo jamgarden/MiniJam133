@@ -1,8 +1,14 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(CapsuleCollider2D))]
 public class PlayerMovement : MonoBehaviour
 {
+    [field: SerializeField] public UnityEvent OnJump { get; private set; }
+
+    public bool IsWalking { get; private set; }
+    public Vector2 FacingDirection { get; private set; }
+
     [SerializeField] private float jumpForce;
     [SerializeField] private float moveSpeed;
     [SerializeField] private AnimationCurve jumpCurve;
@@ -48,6 +54,12 @@ public class PlayerMovement : MonoBehaviour
         SetGravity();
 
         CountDownCoyoteTime();
+
+        IsWalking = isGrounded && Mathf.Abs(moveDirection.x) > 0;
+        if (input.Horizontal > 0)
+            FacingDirection = Vector2.right;
+        else if (input.Horizontal < 0)
+            FacingDirection = Vector2.left;
     }
 
     private void CountDownCoyoteTime()
@@ -122,6 +134,7 @@ public class PlayerMovement : MonoBehaviour
     {
         jumpTimer = 0;
         AudioManager.Instance.PlaySound(jumpSound);
+        OnJump?.Invoke();
     }
 
     private void SetGrounded()
