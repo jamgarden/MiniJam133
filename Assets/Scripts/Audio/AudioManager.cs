@@ -32,7 +32,7 @@ public class AudioManager : MonoBehaviour
     public void PlaySound(AudioClip clip)
     {
         GameObject audioSourceGameObject = audioSourcePool.Get();
-        AudioSource audioSource = audioSourceGameObject.AddComponent<AudioSource>();
+        AudioSource audioSource = audioSourceGameObject.GetComponent<AudioSource>();
         if (audioSourceGameObject != null)
         {
             audioSource.clip = clip;
