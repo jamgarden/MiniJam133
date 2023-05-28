@@ -17,7 +17,6 @@ public class PatrolState : AIState
         if (AtLedge() || AgainstWall())
         {
             ReverseDirection();
-            Debug.Log("AA");
         }
 
         ReverseDirectionOnTimer();

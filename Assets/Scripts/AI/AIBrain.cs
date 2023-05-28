@@ -24,7 +24,9 @@ public class AIBrain : MonoBehaviour, IInput
     public float WallDetectRayDistance { get; private set; }
 
 
-    [SerializeField] private float stateChangeTime;
+    [SerializeField] private float minStateChangeTime;
+    [SerializeField] private float maxStateChangeTime;
+
     private float stateChangeTimer;
 
     private AIState currentState;
@@ -43,7 +45,7 @@ public class AIBrain : MonoBehaviour, IInput
         stateChangeTimer -= Time.deltaTime;
         if (stateChangeTimer < 0)
         {
-            stateChangeTimer = stateChangeTime;
+            stateChangeTimer = Random.Range(minStateChangeTime, maxStateChangeTime);
             (currentState, nextState) = (nextState, currentState);
         }
     }
