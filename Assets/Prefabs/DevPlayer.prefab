@@ -9,13 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4796985856779189664}
-  - component: {fileID: -3335555659795296323}
   - component: {fileID: 4796985856779189667}
+  - component: {fileID: 6472215589167880223}
   - component: {fileID: 4796985856779189666}
   - component: {fileID: 4796985856779189669}
   - component: {fileID: 4796985856779189665}
   m_Layer: 0
-  m_Name: Player
+  m_Name: DevPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,18 +37,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-3335555659795296323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4796985856779189668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94998fbc677c0354eb5335d95f314cd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4796985856779189667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,6 +49,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e93e2ae83bdf64faaaf59e281c0708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <OnJump>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
   jumpForce: 600
   moveSpeed: 200
   jumpCurve:
@@ -165,9 +156,23 @@ MonoBehaviour:
   coyoteTime: 0.1
   extraJumps: 1
   gravityMultiplier: 180
+  jumpSound: {fileID: 0}
   groundRayLayerMask:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &6472215589167880223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796985856779189668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94998fbc677c0354eb5335d95f314cd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3370125120014230374}
 --- !u!114 &4796985856779189666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,6 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6373170810375101678}
   - component: {fileID: 6373170810375101677}
+  - component: {fileID: 3370125120014230374}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -243,8 +249,8 @@ Transform:
   m_GameObject: {fileID: 6373170810375101679}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.031633094}
-  m_LocalScale: {x: 0.59341, y: 0.59341, z: 0.59341}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4796985856779189664}
   m_RootOrder: 0
@@ -290,7 +296,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -1320001792, guid: 46e3222371c58854d9b5b22a4f524076, type: 3}
   m_Color: {r: 1, g: 0.36477983, b: 0.36477983, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -301,3 +307,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3370125120014230374
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6373170810375101679}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f5069c194bcfb2242b830f67ab8dc2c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
