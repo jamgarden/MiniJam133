@@ -6183,6 +6183,7 @@ MonoBehaviour:
   extraJumps: 1
   gravityMultiplier: 180
   jumpSound: {fileID: 8300000, guid: a496fe2745f8994418f13e4c0198ee17, type: 3}
+  landingSound: {fileID: 8300000, guid: d5fee68e6857194438d5187845cf7bbe, type: 3}
   groundRayLayerMask:
     serializedVersion: 2
     m_Bits: 64

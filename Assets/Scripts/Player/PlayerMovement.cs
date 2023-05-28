@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int extraJumps;
     [SerializeField] private float gravityMultiplier;
     [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip landingSound;
 
     [Space]
     [SerializeField] private LayerMask groundRayLayerMask;
@@ -150,6 +151,7 @@ public class PlayerMovement : MonoBehaviour
     {
         remainingExtraJumps = extraJumps;
         coyoteTimer = coyoteTime;
+        AudioManager.Instance.PlaySound(landingSound);
     }
 
     private void FixedUpdate()
