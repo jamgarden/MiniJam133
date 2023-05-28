@@ -15,6 +15,7 @@ public class PlayerGraphics : MonoBehaviour
     private void Update()
     {
         animator.SetBool("IsWalking", movementController.IsWalking);
+        animator.SetBool("IsGrounded", movementController.IsGrounded);
         playerSprite.flipX = movementController.FacingDirection.x > 0;
     }
 
