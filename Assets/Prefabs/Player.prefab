@@ -5455,6 +5455,7 @@ MonoBehaviour:
   punchEffectPrefab: {fileID: 0}
   punchCooldown: 0.2
   punchRadius: 0.6
+  punchSound: {fileID: 115893264081372008}
 --- !u!114 &4796985856779189667
 MonoBehaviour:
   m_ObjectHideFlags: 0
