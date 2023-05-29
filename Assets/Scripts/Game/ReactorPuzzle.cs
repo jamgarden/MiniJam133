@@ -25,7 +25,6 @@ public class ReactorPuzzle : MonoBehaviour
 
     public void OnButtonPressed(int buttonIndex)
     {
-        Debug.Log(buttonIndex);
         if (correctButtonSequence[positionInSequence] == buttonIndex)
             positionInSequence++;
         else
