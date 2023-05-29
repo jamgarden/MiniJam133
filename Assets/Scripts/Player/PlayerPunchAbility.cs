@@ -6,6 +6,7 @@ public class PlayerPunchAbility : MonoBehaviour
     [SerializeField] private GameObject punchEffectPrefab;
     [SerializeField] private float punchCooldown;
     [SerializeField] private float punchRadius;
+    [SerializeField] private AudioSource punchSound;
 
     private ObjectPool<GameObject> punchEffectsPool;
     private IInput input;
@@ -64,6 +65,7 @@ public class PlayerPunchAbility : MonoBehaviour
 
     private void SpawnPunchEffect()
     {
+        punchSound.Play();
         if (punchEffectPrefab == null)
             return;
 

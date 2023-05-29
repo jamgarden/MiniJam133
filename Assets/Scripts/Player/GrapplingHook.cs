@@ -15,7 +15,9 @@ public class GrapplingHook : MonoBehaviour
     [SerializeField] private AnimationCurve velocityCurve;
     [SerializeField] private AnimationCurve minWobbleCurve;
     [SerializeField] private AnimationCurve maxWobbleCurve;
-    [SerializeField] private AudioClip grappleSound;
+    [SerializeField] private AudioSource grappleSound;
+    
+    [SerializeField] private AudioSource grappleHit;
     [SerializeField] private float unhookDistance;
 
     private Vector2 hookPosition;
@@ -85,7 +87,7 @@ public class GrapplingHook : MonoBehaviour
         if (hit != false)
         {
             if (grappleSound != null)
-                AudioManager.Instance.PlaySound(grappleSound);
+            grappleSound.Play();
             hooked = false;
             initialDistance = Vector2.Distance(hit.point, transform.position);
             initialDirection = (hit.point - (Vector2)transform.position).normalized;
@@ -112,6 +114,9 @@ public class GrapplingHook : MonoBehaviour
                 }
                 yield return null;
             }
+            grappleSound.Stop();
+            grappleHit.pitch = UnityEngine.Random.Range(.95f, 1.02f);
+            grappleHit.Play();
             hookPosition = hit.point;
             hooked = true;
         }
