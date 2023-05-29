@@ -2742,6 +2742,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicSwitch1
       objectReference: {fileID: 0}
+    - target: {fileID: 2554611805465433820, guid: 83f2a4997851cbc4bad337dd587e5bdc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2554611805465433821, guid: 83f2a4997851cbc4bad337dd587e5bdc, type: 3}
       propertyPath: m_RootOrder
       value: 0
