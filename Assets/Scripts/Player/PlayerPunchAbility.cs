@@ -49,7 +49,7 @@ public class PlayerPunchAbility : MonoBehaviour
             return;
 
         cooldownTimer = punchCooldown;
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(punchPosition, punchRadius);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, punchRadius);
 
         foreach (Collider2D collider in colliders)
         {
