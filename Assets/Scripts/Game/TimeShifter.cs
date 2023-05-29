@@ -5,7 +5,6 @@ public class TimeShifter : MonoBehaviour
 {
     [SerializeField] private GameObject presentGameObjects;
     [SerializeField] private GameObject futureGameObjects;
-
     public static Action OnTimeShift;
 
     private void Awake()
