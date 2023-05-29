@@ -1648,7 +1648,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f58cf2e2380c6044aa36da99d6277923, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.449
+  m_Volume: 0.284
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6075,10 +6075,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1491807648}
     m_Modifications:
-    - target: {fileID: 290471045782364549, guid: a8ea031a282b2274cbd1415384f2d139, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1168203884318456608, guid: a8ea031a282b2274cbd1415384f2d139, type: 3}
       propertyPath: buttonSound
       value: 
@@ -6130,10 +6126,6 @@ PrefabInstance:
     - target: {fileID: 1168203884318456639, guid: a8ea031a282b2274cbd1415384f2d139, type: 3}
       propertyPath: m_Name
       value: ShiftSwitch (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8196439949697613842, guid: a8ea031a282b2274cbd1415384f2d139, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8ea031a282b2274cbd1415384f2d139, type: 3}
@@ -9060,7 +9052,6 @@ Transform:
   - {fileID: 1724999879}
   - {fileID: 1819868033}
   - {fileID: 2094747041}
-  - {fileID: 1532957331}
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
