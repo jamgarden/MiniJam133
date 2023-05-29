@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShiftSwitch : MonoBehaviour, IPunchable
 {
+    [SerializeField] private AudioSource buttonSound;
     //[SerializeField]
     //GameObject TimeShiftObject;
 
@@ -24,6 +25,7 @@ public class ShiftSwitch : MonoBehaviour, IPunchable
 
     public void Punch()
     {
+        buttonSound.Play();
         Debug.Log("Punched a TimeShift switch");
         timeShifter.ShiftTime();
     }
