@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class MusicSwitch1 : MonoBehaviour
 {
-    [SerializeField] private AudioSource world1Music;
-    [SerializeField] private AudioSource world2Music;
-     private void OnEnable()
+    [SerializeField] private AudioMixerSnapshot world1Snap;
+    [SerializeField] private AudioMixerSnapshot world2Snap;
+
+
+    private void OnEnable()
     {
-        world1Music.mute = true;
-        world2Music.mute = false;
+        world1Snap.TransitionTo(0.01f);
     }       
 }
