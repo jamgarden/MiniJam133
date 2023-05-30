@@ -677,7 +677,7 @@ GameObject:
   - component: {fileID: 101094558}
   - component: {fileID: 101094560}
   - component: {fileID: 101094559}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tiles_4_57 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -787,7 +787,7 @@ GameObject:
   m_Component:
   - component: {fileID: 101527192}
   - component: {fileID: 101527193}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tiles_4_11 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1758,7 +1758,7 @@ GameObject:
   - component: {fileID: 254917922}
   - component: {fileID: 254917924}
   - component: {fileID: 254917923}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tiles_4_9 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5369,7 +5369,7 @@ GameObject:
   - component: {fileID: 993899631}
   - component: {fileID: 993899633}
   - component: {fileID: 993899632}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tiles_4_57 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5630,7 +5630,7 @@ GameObject:
   - component: {fileID: 1074457655}
   - component: {fileID: 1074457657}
   - component: {fileID: 1074457656}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tiles_4_9 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6658,7 +6658,7 @@ GameObject:
   - component: {fileID: 1335300872}
   - component: {fileID: 1335300874}
   - component: {fileID: 1335300873}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tiles_4_14 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8330,7 +8330,7 @@ GameObject:
   - component: {fileID: 1703310420}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8556,7 +8556,7 @@ GameObject:
   - component: {fileID: 1747553081}
   - component: {fileID: 1747553083}
   - component: {fileID: 1747553082}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tiles_4_14 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9158,7 +9158,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1928454613
 Transform:
   m_ObjectHideFlags: 0

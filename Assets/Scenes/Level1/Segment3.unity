@@ -214,6 +214,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1491807648}
     m_Modifications:
+    - target: {fileID: 1168203884318456608, guid: a8ea031a282b2274cbd1415384f2d139, type: 3}
+      propertyPath: buttonSound
+      value: 
+      objectReference: {fileID: 1910795688}
     - target: {fileID: 1168203884318456638, guid: a8ea031a282b2274cbd1415384f2d139, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -650,7 +654,7 @@ GameObject:
   - component: {fileID: 101094558}
   - component: {fileID: 101094560}
   - component: {fileID: 101094559}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tiles_4_57 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1660,7 +1664,7 @@ GameObject:
   - component: {fileID: 244740786}
   - component: {fileID: 244740788}
   - component: {fileID: 244740787}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tiles_4_14 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1771,7 +1775,7 @@ GameObject:
   - component: {fileID: 254917922}
   - component: {fileID: 254917924}
   - component: {fileID: 254917923}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tiles_4_9 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2777,6 +2781,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &402217947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1808668090485954539, guid: cf07cef8571c5f84995ab153019532c5, type: 3}
+  m_PrefabInstance: {fileID: 1053102150}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &402217950 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1808668090485954536, guid: cf07cef8571c5f84995ab153019532c5, type: 3}
+  m_PrefabInstance: {fileID: 1053102150}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &411717761
 GameObject:
   m_ObjectHideFlags: 0
@@ -2981,6 +2995,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &480038175
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1491807648}
+    m_Modifications:
+    - target: {fileID: 2554611805465433820, guid: 83f2a4997851cbc4bad337dd587e5bdc, type: 3}
+      propertyPath: m_Name
+      value: MusicSwitch1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554611805465433821, guid: 83f2a4997851cbc4bad337dd587e5bdc, type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554611805465433821, guid: 83f2a4997851cbc4bad337dd587e5bdc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554611805465433821, guid: 83f2a4997851cbc4bad337dd587e5bdc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554611805465433821, guid: 83f2a4997851cbc4bad337dd587e5bdc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554611805465433821, guid: 83f2a4997851cbc4bad337dd587e5bdc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554611805465433821, guid: 83f2a4997851cbc4bad337dd587e5bdc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554611805465433821, guid: 83f2a4997851cbc4bad337dd587e5bdc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554611805465433821, guid: 83f2a4997851cbc4bad337dd587e5bdc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554611805465433821, guid: 83f2a4997851cbc4bad337dd587e5bdc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554611805465433821, guid: 83f2a4997851cbc4bad337dd587e5bdc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554611805465433821, guid: 83f2a4997851cbc4bad337dd587e5bdc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 83f2a4997851cbc4bad337dd587e5bdc, type: 3}
 --- !u!1 &493375156
 GameObject:
   m_ObjectHideFlags: 0
@@ -2992,7 +3063,7 @@ GameObject:
   - component: {fileID: 493375157}
   - component: {fileID: 493375159}
   - component: {fileID: 493375158}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tiles_4_9 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3331,6 +3402,7 @@ Transform:
   - {fileID: 1741404636}
   - {fileID: 1554643096}
   - {fileID: 1525534428}
+  - {fileID: 402217950}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3957,7 +4029,7 @@ GameObject:
   - component: {fileID: 604451681}
   - component: {fileID: 604451680}
   - component: {fileID: 604451679}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Ground (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4152,7 +4224,7 @@ GameObject:
   - component: {fileID: 618343251}
   - component: {fileID: 618343253}
   - component: {fileID: 618343252}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tiles_4_57 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5151,7 +5223,7 @@ GameObject:
   - component: {fileID: 819997525}
   - component: {fileID: 819997527}
   - component: {fileID: 819997526}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tiles_4_57 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5592,6 +5664,16 @@ Transform:
   m_Father: {fileID: 1154875015}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &897194583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2554611805465433820, guid: 83f2a4997851cbc4bad337dd587e5bdc, type: 3}
+  m_PrefabInstance: {fileID: 480038175}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &897194586 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2554611805465433821, guid: 83f2a4997851cbc4bad337dd587e5bdc, type: 3}
+  m_PrefabInstance: {fileID: 480038175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &899544213
 GameObject:
   m_ObjectHideFlags: 0
@@ -5603,7 +5685,7 @@ GameObject:
   - component: {fileID: 899544214}
   - component: {fileID: 899544216}
   - component: {fileID: 899544215}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tiles_4_57 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5887,7 +5969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 958748443}
   - component: {fileID: 958748444}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Post_Apocalyptic_Objects__10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6281,6 +6363,63 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.48000002, y: 0.96000004}
   m_EdgeRadius: 0
+--- !u!1001 &1053102150
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 524486223}
+    m_Modifications:
+    - target: {fileID: 1808668090485954536, guid: cf07cef8571c5f84995ab153019532c5, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808668090485954536, guid: cf07cef8571c5f84995ab153019532c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808668090485954536, guid: cf07cef8571c5f84995ab153019532c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808668090485954536, guid: cf07cef8571c5f84995ab153019532c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808668090485954536, guid: cf07cef8571c5f84995ab153019532c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808668090485954536, guid: cf07cef8571c5f84995ab153019532c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808668090485954536, guid: cf07cef8571c5f84995ab153019532c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808668090485954536, guid: cf07cef8571c5f84995ab153019532c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808668090485954536, guid: cf07cef8571c5f84995ab153019532c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808668090485954536, guid: cf07cef8571c5f84995ab153019532c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808668090485954536, guid: cf07cef8571c5f84995ab153019532c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808668090485954539, guid: cf07cef8571c5f84995ab153019532c5, type: 3}
+      propertyPath: m_Name
+      value: MusicSwitch2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cf07cef8571c5f84995ab153019532c5, type: 3}
 --- !u!1 &1084597769
 GameObject:
   m_ObjectHideFlags: 0
@@ -7456,6 +7595,7 @@ Transform:
   - {fileID: 1476925816}
   - {fileID: 1724972364}
   - {fileID: 1427001028}
+  - {fileID: 897194586}
   - {fileID: 270465223}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -8315,7 +8455,7 @@ GameObject:
   - component: {fileID: 1561876144}
   - component: {fileID: 1561876146}
   - component: {fileID: 1561876145}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tiles_4_57 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8583,6 +8723,11 @@ Transform:
   m_Father: {fileID: 1640576195}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1629781138 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6836075830770962481, guid: 0e64eb8756af5ee4f9756a6e112b28af, type: 3}
+  m_PrefabInstance: {fileID: 1910795687}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1640576194
 GameObject:
   m_ObjectHideFlags: 0
@@ -8871,6 +9016,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5418389493063842412, guid: f8c7a347e79d56b4e8b9ad9a3f699fbc, type: 3}
+      propertyPath: punchEffectPrefab
+      value: 
+      objectReference: {fileID: 2518801884980827375, guid: a561e9822943f184b9a217976c081294, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8c7a347e79d56b4e8b9ad9a3f699fbc, type: 3}
 --- !u!1 &1700064858
@@ -8968,7 +9117,7 @@ GameObject:
   - component: {fileID: 1724972364}
   - component: {fileID: 1724972366}
   - component: {fileID: 1724972365}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Post_Apocalyptic_Objects__6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9163,7 +9312,7 @@ GameObject:
   - component: {fileID: 1747553081}
   - component: {fileID: 1747553083}
   - component: {fileID: 1747553082}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tiles_4_14 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9389,7 +9538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1790837158}
   - component: {fileID: 1790837159}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tiles_4_11 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9766,12 +9915,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5680630274029491812, guid: 0e64eb8756af5ee4f9756a6e112b28af, type: 3}
+      propertyPath: futureMusic
+      value: 
+      objectReference: {fileID: 897194583}
+    - target: {fileID: 5680630274029491812, guid: 0e64eb8756af5ee4f9756a6e112b28af, type: 3}
+      propertyPath: presentMusic
+      value: 
+      objectReference: {fileID: 402217947}
+    - target: {fileID: 5680630274029491812, guid: 0e64eb8756af5ee4f9756a6e112b28af, type: 3}
+      propertyPath: futureGameObjects
+      value: 
+      objectReference: {fileID: 1491807647}
+    - target: {fileID: 5680630274029491812, guid: 0e64eb8756af5ee4f9756a6e112b28af, type: 3}
+      propertyPath: presentGameObjects
+      value: 
+      objectReference: {fileID: 524486222}
     - target: {fileID: 5680630274029491813, guid: 0e64eb8756af5ee4f9756a6e112b28af, type: 3}
       propertyPath: m_Name
       value: TimeShifter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e64eb8756af5ee4f9756a6e112b28af, type: 3}
+--- !u!82 &1910795688 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 9009766644624369521, guid: 0e64eb8756af5ee4f9756a6e112b28af, type: 3}
+  m_PrefabInstance: {fileID: 1910795687}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1933176050
 GameObject:
   m_ObjectHideFlags: 0
@@ -9870,7 +10040,7 @@ GameObject:
   - component: {fileID: 1948030365}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10203,6 +10373,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 524486223}
     m_Modifications:
+    - target: {fileID: 1168203884318456608, guid: a8ea031a282b2274cbd1415384f2d139, type: 3}
+      propertyPath: buttonSound
+      value: 
+      objectReference: {fileID: 1629781138}
     - target: {fileID: 1168203884318456638, guid: a8ea031a282b2274cbd1415384f2d139, type: 3}
       propertyPath: m_RootOrder
       value: 15
